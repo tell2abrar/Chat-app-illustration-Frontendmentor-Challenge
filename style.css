@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding-top: 1px;
+    margin-top: -1px;
+    background-color: white;
+}
+
+.left-bg-img {
+    width: 25%;
+    height: 85vh;
+    position: fixed;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+.left-bg-img::before {
+    background: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 100%;
+    position: absolute;
+    right: -200px;
+    left: -250px;
+    top: -1000px;
+    content: '';
+    bottom: 0;
+}
+
+.right-bg-img {
+    width: 25%;
+    height: 85vh;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.right-bg-img::before {
+    /* background: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%)); */
+    background-color: hsl(270, 20%, 96%);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    position: absolute;
+    right: -250px;
+    left: -5px;
+    top: 20px;
+    content: '';
+    bottom: 0;
+
+}
+
+
+
+.container {
+    width: 60%;
+    /* border: 4px solid springgreen; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-top: 1px;
+    display: flex;
+}
+
+
+.mobile-container {
+    /* border: 2px solid royalblue; */
+    /* width: 50%; */
+    flex: 0.8;
+    justify-self: center;
+}
+
+.mobile {
+    width: 75%;
+    /* border: 2px solid brown; */
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    animation: mobile-animation-desktop 2s ease-out;
+    box-shadow: 1px 4px 10px 1.2px rgba(66, 66, 66, 0.363);
+}
+
+.mobile__screen {
+    width: 100%;
+    /* border: 2px solid blue; */
+    background-color: hsl(270, 20%, 96%);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding-bottom: 5px;
+
+}
+
+.upper-white-screen {
+    border-bottom: 1px solid hsla(0, 1%, 78%, 0.472);
+    width: 50%;
+    top: 0;
+    transform: translateX(50%);
+    height: 2.5rem;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    border-radius: 25px;
+    /* box-shadow: 0.1px 0px 10px 0.1px #4b4b4b; */
+}
+
+.mobile__subheading {
+    background: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+    /* border: 1px solid green; */
+    padding-top: 2.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.7rem;
+    box-shadow: 0.5px  1px 2px hsl(264, 100%, 61%);
+}
+
+.subheading-content {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+}
+
+.subheading__img {
+    border: 1px solid hsl(0, 0%, 100%);
+    height: 35px;
+    border-radius: 50%;
+}
+
+.subheading__img img {
+   border: 1px solid hsl(0, 0%, 100%);
+   height: 100%;
+   border-radius: 50%;
+   display: block;
+}
+
+.user_info {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 7px;
+}
+
+.user__info-name{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+}
+
+.user__info-status {
+    font-size: 0.65rem;
+    color: rgb(189, 189, 189);
+}
+
+.left-chat {
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 70%;
+    padding: 11px 10px;
+    font-size: 0.7rem;
+    background-color: hsl(270, 3%, 85%);
+    color: hsl(276, 55%, 52%);
+    margin-left: 5px;
+}
+
+.dogs-container {
+    margin-right: 5px;
+    width: 100%;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dog-img {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.dog-img img {
+    margin: 0 5px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.chat-right {
+    background-color: hsl(0, 0%, 100%); 
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 70%;
+    padding: 11px 10px;
+    font-size: 0.7rem;
+    color: hsl(271, 15%, 43%);
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.chat-submit {
+    margin: 10px auto;
+    margin-bottom: 5px;
+    width: 95%;
+    background-color: hsl(0, 0%, 100%); 
+    border-radius: 20px;
+}
+
+input[type='text'] {
+    width: 100%;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+    opacity: 0.4;
+
+}
+
+
+.description-container {
+    /* border: 2px solid black; */
+    flex: 1;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description-container h1 {
+    width: 60%;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    color: hsl(271, 36%, 24%);
+}
+
+.right-description {
+    width: 90%;
+    color: hsl(270, 7%, 64%);
+}
+
+@keyframes mobile-animation-desktop {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+  }
+
+  @keyframes mobile-animation-mobile {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+  } 
+
+  @media  (max-width:540px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mobile {
+        width: 85%;
+        border-radius: 20px;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        animation: mobile-animation-mobile 2s ease-out;
+    }
+
+    .description-container {
+        /* border: 2px solid black; */
+        flex: 1;
+        /* width: 50%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .description-container h1 {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: hsl(271, 36%, 24%);
+    }
+    
+    .right-description {
+        text-align: center;
+        width: 100%;
+        color: hsl(270, 7%, 64%);
+        padding: 10px 2px;
+    }
+}
